@@ -7,6 +7,62 @@ Cypress.Commands.add("logIn", (userName,password)=>{
     cy.get('input.btn_action').click();
 });
 
+//Header
+Cypress.Commands.add('goToCart', ()=>{
+    cy.get('path').click();
+});
+
+Cypress.Commands.add('headerMenu', ()=>{
+    cy.get('.bm-burger-button > button').click();
+    cy.get('.bm-menu').should('be.visible');
+});
+
+Cypress.Commands.add('allItems', {prevSubject: 'headerMenu'}, ()=>{
+    cy.get('#inventory_sidebar_link').click();
+    cy.url().should('include', 'inventory')
+});
+
+Cypress.Commands.add('logOut',{ prevSubject: 'headerMenu'}, ()=>{
+    cy.get('#logout_sidebar_link').click();
+});
+
+Cypress.Commands.add('resetApp', {prevSubject:'headerMenu'}, ()=>{
+    cy.get('#reset_sidebar_link').click();
+})
+
+Cypress.Commands.add('sortProductsBy', (option)=>{
+    switch(option){
+        case 1:
+            option = 'az'
+            break
+        case 2:
+            option = 'za'
+            break
+        case 3:
+            option = 'lohi'
+            break
+        case 4:
+            option = 'hilo'
+            break
+    };
+    cy.get('.product_sort_container')
+    .select(option)
+    .should('have.value', option);
+});
+
+//Body
+Cypress.Commands.add('addProduct', (product)=>{
+    cy.get(`:nth-child(${product}) > .pricebar > .btn_primary`)
+    .should('have.text', 'ADD TO CART')
+    .click()
+    .should('have.text', 'REMOVE');
+});
+
+Cypress.Commands.add('deleteProduct', (product)=>{
+    product = product + 2
+    cy.get(`:nth-child(${product}) > .cart_item_label > .item_pricebar > .btn_secondary`).click();
+});
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
