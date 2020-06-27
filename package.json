@@ -1,0 +1,16 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This is my Cypress project for recruiters.",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "./node_modules/.bin/cypress open",
+    "cypress:run": "./node_modules/.bin/cypress run"
+  },
+  "keywords": [],
+  "author": "Antonio Crespo",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.9.0"
+  }
+}
