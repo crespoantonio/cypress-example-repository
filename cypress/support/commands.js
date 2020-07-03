@@ -39,10 +39,10 @@ Cypress.Commands.add('sortProductsBy', (option)=>{
             option = 'az'
             break
         case 2:
-            option = 'za'
+            option = 'za'           
             break
         case 3:
-            option = 'lohi'
+            option = 'lohi'           
             break
         case 4:
             option = 'hilo'
