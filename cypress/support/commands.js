@@ -24,10 +24,13 @@ Cypress.Commands.add('allItems', {prevSubject: 'headerMenu'}, ()=>{
 
 Cypress.Commands.add('logOut',{ prevSubject: 'headerMenu'}, ()=>{
     cy.get('#logout_sidebar_link').click();
+    cy.get('.bm-menu').should('not.be.visible');
 });
 
 Cypress.Commands.add('resetApp', {prevSubject:'headerMenu'}, ()=>{
     cy.get('#reset_sidebar_link').click();
+    cy.get('.bm-cross-button > button').click();
+
 })
 
 Cypress.Commands.add('sortProductsBy', (option)=>{

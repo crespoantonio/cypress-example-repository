@@ -33,10 +33,14 @@ describe('My portfolio project', ()=>{
         cy.get('.cart_item').should('have.length', 3);
     });
 
-    it('Should remove 3 items from the cart', function(){
+    it('Should remove 1 items from the cart', function(){
         cy.deleteProduct(1);
-        cy.deleteProduct(2);
-        cy.deleteProduct(3);
+        cy.get('.cart_item').should('have.length', 2);
+    });
+
+    it('Should reset  the page', function(){
+        cy.headerMenu().resetApp();
+        cy.goToCart()
         cy.get('.cart_item').should('not.exist');
     });
 
