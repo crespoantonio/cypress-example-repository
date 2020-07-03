@@ -47,7 +47,9 @@ Cypress.Commands.add('sortProductsBy', (option)=>{
     };
     cy.get('.product_sort_container')
     .select(option)
-    .should('have.value', option);
+    .then((e)=>{
+        expect(e).to.have.value(option);
+    });
 });
 
 //Body
