@@ -3,8 +3,11 @@
 //Log In
 Cypress.Commands.add("logIn", (userName,password)=>{
     cy.get('#user-name').type(userName);
-    cy.get('#password').type(password);
+    expect(userName).not.be.empty;
+    cy.get('#password').type(password, {log: false});
+    expect(password).not.be.empty;
     cy.get('input.btn_action').click();
+    
 });
 
 //Header
