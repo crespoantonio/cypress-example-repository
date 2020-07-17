@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe('My portfolio project', ()=>{
+describe.only('My portfolio project', ()=>{
     
     before(()=>{
         cy.fixture('login').as('data');
