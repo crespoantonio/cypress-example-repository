@@ -53,5 +53,5 @@ Sufficient coverage of requirements and functionalities under testing has been a
 No high severity defect is open.
 
 5. Test Report
-The Automatic Test Report will be obtained through JUnit. This Report will report on the results of the execution of each test case. It will include tests that passed and failed, errors found, success rate, and elapsed time.
+The Automatic Test Report will be obtained through Mocha JUnit. This Report will report on the results of the execution of each test case. It will include tests that passed and failed, errors found, success rate, and elapsed time.
 
