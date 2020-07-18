@@ -1,4 +1,4 @@
-# portfolio
+﻿# portfolio
 Antonio Crespo Portfolio
 
 Proyecto: Web Site Sauce Demo
@@ -54,4 +54,14 @@ No high severity defect is open.
 
 5. Test Report
 The Automatic Test Report will be obtained through Mocha JUnit. This Report will report on the results of the execution of each test case. It will include tests that passed and failed, errors found, success rate, and elapsed time.
+
+
+
+Test cases examples:
+
+
+
+
+
+
 
