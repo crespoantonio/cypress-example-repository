@@ -20,39 +20,39 @@ Index
     a.	Input criteria.
     b.	Output critiria.
 5.	Test report
-
-1.  Introduction
+<br>
+1.  Introduction<br>
 This Automated Testing Strategy describes the scope of testing, the testing environment, the resources required, the tools to use, the risks, contingency plans, and the test execution schedule for the Sauce Demo project.
-
-2. Scope
+<br>
+2. Scope<br>
 Black box tests (automated) will be carried out on the functionalities selected during the planning of each sprint.
 The functionalities to be automated will be selected using the criteria of the Checklist "What test cases to automate".
-
-3. Ambient and test tools.
-
-3. a Test tools
+<br>
+3. Ambient and test tools.<br>
+<br>
+3. a Test tools<br>
     Tool                    |   Function    
 Cypress	                    |  Framework to automate web systems.
 Mocha JUnit Reporter        |  Report framework
-
-3. b Test ambient.
+<br>
+3. b Test ambient.<br>
 Browser          | Chrome, Edge, Electron.
 Operating system | Windows 10
-
-4. Input and output criteria.
-
-4. a Input criteria.
+<br>
+4. Input and output criteria.<br>
+<br>
+4. a Input criteria.<br>
 The functionalities must be deployed in the QA environment and have been manually tested.
 The testing framework is installed and ready to run.
 QA environment is available.
 Critical defects found during manual testing have been resolved and closed.
-
-4. b Output criteria.
+<br>
+4. b Output criteria.<br>
 Execution of all automated test cases.
 Sufficient coverage of requirements and functionalities under testing has been achieved.
 No high severity defect is open.
-
-5. Test Report
+<br>
+5. Test Report<br>
 The Automatic Test Report will be obtained through Mocha JUnit. This Report will report on the results of the execution of each test case. It will include tests that passed and failed, errors found, success rate, and elapsed time.
 
 
