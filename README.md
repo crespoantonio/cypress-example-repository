@@ -59,9 +59,6 @@ The Automatic Test Report will be obtained through Mocha JUnit. This Report will
 
 Test cases examples:
 
+![Case 1]("C:\Users\Antonio Crespo\Documents\Portafolio\Cypress\Test1.JPG")
 
-
-
-
-
-
+![Case 2]("C:\Users\Antonio Crespo\Documents\Portafolio\Cypress\Test2.JPG")

@@ -7,7 +7,7 @@ describe('My portfolio project on saucedemo.com/', ()=>{
         cy.visit('/');
     });
 
-    it('Should Log In', function(){
+    it('SD001 - Should Log In', function(){
         cy.logIn(this.data.username, this.data.password);
         cy.url().should('include', 'inventory');
     });
@@ -17,7 +17,7 @@ describe('My portfolio project on saucedemo.com/', ()=>{
         cy.get('.cart_item').should('not.exist');
     });
 
-    it('Should order A to Z', function(){
+    it('SD002 - Should order A to Z', function(){
         cy.headerMenu().allItems();
         cy.sortProductsBy(1);
         cy.get('.inventory_list > :nth-child(1) .inventory_item_name')
