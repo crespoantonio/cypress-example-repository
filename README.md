@@ -63,3 +63,17 @@ The Automatic Test Report will be obtained through Mocha JUnit. This Report will
 <img  src="Images/Test1.png">
 
 <img  src="Images/Test2.png">
+
+------------------------
+### Scripts:
+	npm install - Install dependencies
+	npm run cypress:open => Open Cypress Dashboard
+	npm run cypress:run => Run Cypress Headless
+
+### Default Config:
+	You can check and change this info on cypress.json file.
+	watchForFileChanges": false
+    baseUrl": "https://www.saucedemo.com/"
+    viewportWidth": 1366
+    viewportHeight": 768
+    defaultCommandTimeout": 8000

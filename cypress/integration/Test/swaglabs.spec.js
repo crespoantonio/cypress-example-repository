@@ -3,8 +3,11 @@
 describe('My portfolio project on saucedemo.com/', ()=>{
     
     before(()=>{
-        cy.fixture('login').as('data');
         cy.visit('/');
+    });
+
+    beforeEach(()=>{
+        cy.fixture('login').as('data');
     });
 
     it('SD001 - Should Log In', function(){
