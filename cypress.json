@@ -3,5 +3,6 @@
     "baseUrl": "https://www.saucedemo.com/",
     "viewportWidth": 1366,
     "viewportHeight": 768,
-    "defaultCommandTimeout": 8000
+    "defaultCommandTimeout": 8000,
+    "reporter": "mochawesome"
 }
