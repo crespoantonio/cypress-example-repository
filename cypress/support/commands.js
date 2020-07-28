@@ -6,6 +6,7 @@ Cypress.Commands.add("logIn", (data)=>{
     expect(data.username).not.be.empty;
     cy.get('#password').type(data.password, {log: false});
     expect(data.password).not.be.empty;
+    cy.screenshot('SD001', {blackout:['#password']})
     cy.get('input.btn_action').click();
 });
 
