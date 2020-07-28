@@ -11,8 +11,10 @@ describe('My portfolio project on saucedemo.com/', ()=>{
     });
 
     it('SD001 - Should Log In', function(){
-        cy.logIn(this.data.username, this.data.password);
-        cy.url().should('include', 'inventory');
+        cy.get('@data').then((data)=>{
+            cy.logIn(data);
+            cy.url().should('include', 'inventory');
+        });
     });
 
     it('Should go to cart an be empty', function(){

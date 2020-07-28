@@ -1,13 +1,12 @@
 ///<reference types ="cypress"/>
 
 //Log In
-Cypress.Commands.add("logIn", (userName,password)=>{
-    cy.get('#user-name').type(userName);
-    expect(userName).not.be.empty;
-    cy.get('#password').type(password, {log: false});
-    expect(password).not.be.empty;
+Cypress.Commands.add("logIn", (data)=>{
+    cy.get('#user-name').type(data.username);
+    expect(data.username).not.be.empty;
+    cy.get('#password').type(data.password, {log: false});
+    expect(data.password).not.be.empty;
     cy.get('input.btn_action').click();
-    
 });
 
 //Header
