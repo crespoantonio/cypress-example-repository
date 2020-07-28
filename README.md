@@ -72,8 +72,8 @@ The Automatic Test Report will be obtained through Mocha JUnit. This Report will
 
 ### Default Config:
 	You can check and change this info on cypress.json file.
-	watchForFileChanges": false
-    baseUrl": "https://www.saucedemo.com/"
-    viewportWidth": 1366
-    viewportHeight": 768
-    defaultCommandTimeout": 8000
+	watchForFileChanges: false
+    baseUrl: "https://www.saucedemo.com/"
+    viewportWidth: 1366
+    viewportHeight: 768
+    defaultCommandTimeout: 8000
