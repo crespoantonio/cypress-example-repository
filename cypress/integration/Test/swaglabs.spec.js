@@ -13,7 +13,7 @@ describe('My portfolio project on saucedemo.com/', ()=>{
     it('SD001 - Should Log In', function(){
         cy.get('@data').then((data)=>{
             cy.logIn(data);
-            cy.url().should('include', 'inventory');
+            cy.url().should('include', 'inventory', 'The URL is not the expected');
         });
     });
 
