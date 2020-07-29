@@ -77,3 +77,4 @@ The Automatic Test Report will be obtained through Mocha JUnit. This Report will
     viewportWidth: 1366
     viewportHeight: 768
     defaultCommandTimeout: 8000
+	reporter: mochawesome
