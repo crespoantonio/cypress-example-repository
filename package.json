@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Antonio Crespo",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cypress": "^4.9.0"
   },
