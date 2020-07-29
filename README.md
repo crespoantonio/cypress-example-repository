@@ -40,7 +40,9 @@ The functionalities to be automated will be selected using the criteria of the C
 ##### 3.b - Test ambient
 |Browser|Operating System  |
 |--|--|
-|Chrome, Edge, Electron.|Windows 10  |
+|Chrome.|Windows 10  |
+|Edge.|Windows 10  |
+|Electron.|Windows 10  |
 
 #### 4. Input and output criteria.
 
