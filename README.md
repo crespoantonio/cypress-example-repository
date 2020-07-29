@@ -68,7 +68,7 @@ The Automatic Test Report will be obtained through Mocha JUnit. This Report will
 
 ------------------------
 ### Scripts:
-	npm install - Install dependencies
+	npm install
 	npm run cypress:open => Open Cypress Dashboard
 	npm run cypress:run => Run Cypress Headless
 
