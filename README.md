@@ -78,3 +78,7 @@ The Automatic Test Report will be obtained through Mocha JUnit. This Report will
     viewportHeight: 768
     defaultCommandTimeout: 8000
 	reporter: mochawesome
+--------------
+### Contact Information:
+	Mail: lic.crespoantonio@gmail.com
+	LinkedIn: /antonio-crespo89/
