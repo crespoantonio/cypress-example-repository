@@ -34,7 +34,7 @@ The functionalities to be automated will be selected using the criteria of the C
 
 |TOOL|Function  |
 |--|--|
-|Mocha Wesome  |Report framework
+|Mochawesome  |Report framework
 |Cypress|Framework to automate web systems.
 
 ##### 3.b - Test ambient
