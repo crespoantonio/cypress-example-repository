@@ -1,0 +1,11 @@
+{
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "sortProducts":{
+        "aToZ": "Sauce Labs Backpack",
+        "zToA": "Test.allTheThings() T-Shirt (Red)",
+        "lowToHigh": "Sauce Labs Onesie",
+        "highToLow":"Sauce Labs Fleece Jacket"
+    },
+    "logInURL": "https://www.saucedemo.com/inventory.html"
+}
