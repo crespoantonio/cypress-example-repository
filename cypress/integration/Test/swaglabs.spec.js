@@ -41,9 +41,7 @@ describe('My portfolio project on saucedemo.com/', ()=>{
     });
 
     it('SD000 - Should add 3 diferent items to the cart', function(){
-        for(let i=1; i<=3; i++){
-            cy.addProduct(i);    
-        }
+        for(let i=1; i<=3; i++){cy.addProduct(i);}
         cy.visit('/cart.html');
         cy.get(LOCATORS.cartItems).should('have.length', 3);
     });
