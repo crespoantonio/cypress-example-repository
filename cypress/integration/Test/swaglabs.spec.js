@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-const LOCATORS = require('../../fixtures/locators.json')
+const LOCATORS = require('../../fixtures/locators.json');
 
 describe('My portfolio project on saucedemo.com/', ()=>{
     
@@ -8,13 +8,13 @@ describe('My portfolio project on saucedemo.com/', ()=>{
     });
 
     beforeEach(()=>{
-        cy.fixture('loginData').as('data');
+        cy.fixture('data').as('data');
     });
 
     it('SD001 - Should Log In', function(){
         cy.get('@data').then((data)=>{
             cy.logIn(data);
-            cy.url().should('include', 'inventory', 'The URL is not the expected');
+            cy.url().should('eq', data.logInURL, 'The URL is not the expected');
         });
     });
 
@@ -25,19 +25,27 @@ describe('My portfolio project on saucedemo.com/', ()=>{
 
     it('SD002 - Should order A to Z', function(){
         cy.headerMenu().allItems();
-        cy.sortProductsBy(1, 'Sauce Labs Backpack');
+        cy.get('@data').then((data)=>{
+            cy.sortProductsBy(1, data.sortProducts.aToZ);
+        })
     });
 
     it('SD000 - Should order Z to A', function(){
-        cy.sortProductsBy(2, 'Test.allTheThings() T-Shirt (Red)');
+        cy.get('@data').then((data)=>{
+            cy.sortProductsBy(2, data.sortProducts.zToA);
+        })
     });
 
     it('SD000 - Should order Low to High Price', function(){
-        cy.sortProductsBy(3, 'Sauce Labs Onesie');
+        cy.get('@data').then((data)=>{
+            cy.sortProductsBy(3, data.sortProducts.lowToHigh);
+        })
     });
 
     it('SD000 - Should order High to Low Price', function(){
-        cy.sortProductsBy(4, 'Sauce Labs Fleece Jacket');
+        cy.get('@data').then((data)=>{
+            cy.sortProductsBy(4, data.sortProducts.highToLow);
+        })
     });
 
     it('SD000 - Should add 3 diferent items to the cart', function(){

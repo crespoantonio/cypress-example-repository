@@ -66,6 +66,6 @@ Cypress.Commands.add('addProduct', (product)=>{
 });
 
 Cypress.Commands.add('deleteProduct', (product)=>{
-    product = product + 2
+    product += 2
     cy.get(`:nth-child(${product}) ${LOCATORS.deleteProduct}`).click();
 });
