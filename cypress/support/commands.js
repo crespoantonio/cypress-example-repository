@@ -7,7 +7,7 @@ Cypress.Commands.add("logIn", (data)=>{
     expect(data.username).not.be.empty;
     cy.get(LOCATORS.password).type(data.password, {log: false});
     expect(data.password).not.be.empty;
-    cy.screenshot('SD001', {blackout:['#password']})
+    cy.screenshot('SD001', {blackout:[LOCATORS.password]})
     cy.get(LOCATORS.logInButton).click();
 });
 
