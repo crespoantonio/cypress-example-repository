@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+const LOCATORS = require('../../fixtures/locators.json')
 
 describe('My portfolio project on saucedemo.com/', ()=>{
     
@@ -7,7 +8,7 @@ describe('My portfolio project on saucedemo.com/', ()=>{
     });
 
     beforeEach(()=>{
-        cy.fixture('login').as('data');
+        cy.fixture('loginData').as('data');
     });
 
     it('SD001 - Should Log In', function(){
@@ -17,56 +18,48 @@ describe('My portfolio project on saucedemo.com/', ()=>{
         });
     });
 
-    it('Should go to cart an be empty', function(){
-        cy.goToCart();
-        cy.get('.cart_item').should('not.exist');
+    it('SD000 - Should go to cart an be empty', function(){
+        cy.visit('/cart.html');
+        cy.get(LOCATORS.cartItems).should('not.exist');
     });
 
     it('SD002 - Should order A to Z', function(){
         cy.headerMenu().allItems();
-        cy.sortProductsBy(1);
-        cy.get('.inventory_list > :nth-child(1) .inventory_item_name')
-        .should('have.text', 'Sauce Labs Backpack')
+        cy.sortProductsBy(1, 'Sauce Labs Backpack');
     });
 
-    it('Should order Z to A', function(){
-        cy.sortProductsBy(2);
-        cy.get('.inventory_list > :nth-child(1) .inventory_item_name')
-        .should('have.text', 'Test.allTheThings() T-Shirt (Red)')
+    it('SD000 - Should order Z to A', function(){
+        cy.sortProductsBy(2, 'Test.allTheThings() T-Shirt (Red)');
     });
 
-    it('Should order Low to High Price', function(){
-        cy.sortProductsBy(3);
-        cy.get('.inventory_list > :nth-child(1) .inventory_item_name')
-        .should('have.text', 'Sauce Labs Onesie')
+    it('SD000 - Should order Low to High Price', function(){
+        cy.sortProductsBy(3, 'Sauce Labs Onesie');
     });
 
-    it('Should order High to Low Price', function(){
-        cy.sortProductsBy(4);
-        cy.get('.inventory_list > :nth-child(1) .inventory_item_name')
-        .should('have.text', 'Sauce Labs Fleece Jacket')
+    it('SD000 - Should order High to Low Price', function(){
+        cy.sortProductsBy(4, 'Sauce Labs Fleece Jacket');
     });
 
-    it('Should add 3 diferent items to the cart', function(){
-        cy.addProduct(1);
-        cy.addProduct(2);
-        cy.addProduct(3);
-        cy.goToCart();
-        cy.get('.cart_item').should('have.length', 3);
+    it('SD000 - Should add 3 diferent items to the cart', function(){
+        for(let i=1; i<=3; i++){
+            cy.addProduct(i);    
+        }
+        cy.visit('/cart.html');
+        cy.get(LOCATORS.cartItems).should('have.length', 3);
     });
 
-    it('Should remove 1 items from the cart', function(){
+    it('SD000 - Should remove 1 items from the cart', function(){
         cy.deleteProduct(1);
-        cy.get('.cart_item').should('have.length', 2);
+        cy.get(LOCATORS.cartItems).should('have.length', 2);
     });
 
-    it('Should reset  the page', function(){
+    it('SD000 - Should reset  the page', function(){
         cy.headerMenu().resetApp();
-        cy.goToCart()
-        cy.get('.cart_item').should('not.exist');
+        cy.visit('/cart.html')
+        cy.get(LOCATORS.cartItems).should('not.exist');
     });
 
-    it('Should log Out', function(){
+    it('SD000 - Should log Out', function(){
         cy.headerMenu().logOut();
         cy.url().should('include', 'index');
     });

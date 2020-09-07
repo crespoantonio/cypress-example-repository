@@ -11,7 +11,7 @@
   "author": "Antonio Crespo",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^4.9.0"
+    "cypress": "^5.1.0"
   },
   "devDependencies": {
     "mochawesome": "^6.1.1",

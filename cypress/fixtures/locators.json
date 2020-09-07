@@ -1,0 +1,18 @@
+{
+    "cartItems": ".cart_item",
+    "firstItem": ".inventory_list > :nth-child(1) .inventory_item_name",
+    "userName": "#user-name",
+    "password": "#password",
+    "logInButton": "input.btn_action",
+    "openMenu": ".bm-burger-button > button",
+    "checkMenu": ".bm-menu",
+    "menuItems": {
+        "allItems": "#inventory_sidebar_link",
+        "logOut": "#logout_sidebar_link",
+        "resetApp":"#reset_sidebar_link",
+        "closeMenu": ".bm-cross-button > button"
+    },
+    "sortContainer": ".product_sort_container",
+    "addProduct": "> .pricebar > .btn_primary",
+    "deleteProduct": "> .cart_item_label > .item_pricebar > .btn_secondary"
+}
